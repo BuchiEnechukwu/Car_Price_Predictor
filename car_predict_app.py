@@ -61,4 +61,4 @@ if st.button("Predict Selling Price"):
     prediction = model.predict(input_data)[0]
     predicted_price = np.exp(prediction)  # or 10 ** if log10 was used
 
-    st.success(f"Estimated Selling Price: ${int(predicted_price):,}")
+    st.success(f"Estimated Selling Price: ₹{int(predicted_price):,}")
