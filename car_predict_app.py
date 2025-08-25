@@ -60,6 +60,5 @@ input_data = pd.DataFrame({
 if st.button("Predict Selling Price"):
     prediction = model.predict(input_data)[0]
     predicted_price = np.exp(prediction)  # or 10 ** if log10 was used
-    predicted_price_dollars = predicted_price_rupees/87.56
 
-    st.success(f"Estimated Selling Price: $ {int(predicted_price_dollars):,}")
+    st.success(f"Estimated Selling Price: Rupees {int(predicted_price):,}")
